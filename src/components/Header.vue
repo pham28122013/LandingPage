@@ -15,7 +15,7 @@
                 text
                 v-for="item in menuItems"
                 :key="item"
-                class="text-white text-button font-weight-bold"
+                class="text-white text-button montserrat-14-bold"
               >
                 {{ t(item) }}
               </v-btn>
@@ -102,7 +102,7 @@
 
         <!-- Main Content -->
         <div class="main-content">
-          <h1 class="text-white font-weight-bold text-h3 text-center mb-6">
+          <h1 class="text-white font-weight-bold text-center mb-6 playfair-80-bold">
             {{ t('header.title')}}
           </h1>
 
@@ -112,8 +112,8 @@
               <v-row justify="center" align="center" class="text-center">
                 <template v-for="(item, index) in countdownItems" :key="item.label">
                   <v-col cols="auto" class="countdown-item">
-                    <div class="text-h4 font-weight-bold">{{ item.value }}</div>
-                    <div class="text-caption">{{ t('header.coundown.' + item.label) }}</div>
+                    <div class="font-weight-bold playfair-60-bold">{{ item.value }}</div>
+                    <div class="text-caption montserrat-15-bold">{{ t('header.coundown.' + item.label) }}</div>
                   </v-col>
                   <v-col
                     v-if="index < countdownItems.length - 1"
@@ -130,7 +130,7 @@
 
           <!-- Subtitle -->
           <div class="text-center text-white mb-6 text-header" style="max-width: 500px; margin: 0 auto;">
-            <p>{{ t('header.subtitle') }}</p>
+            <p montserrat-18-regular>{{ t('header.subtitle') }}</p>
           </div>
 
           <!-- Email Input -->

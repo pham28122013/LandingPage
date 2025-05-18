@@ -4,9 +4,9 @@
       <v-row>
         <!-- Left Section: About Us Text and Stats -->
         <v-col cols="12" md="6" class="pr-md-6">
-          <h1 class="text-h3 text-md-h3 text-sm-h4 font-weight-bold mb-6">{{ t('aboutUs.title') }}</h1>
+          <h1 class="playfair-60-bold-tight">{{ t('aboutUs.title') }}</h1>
           
-          <p class="text-body-1 mb-6">
+          <p class="text-body-1 mb-6 montserrat-14-regular ">
             {{ t('aboutUs.description')}}
           </p>
           
@@ -14,13 +14,13 @@
             <!-- Users Stat -->
             <div class="mb-8">
               <div class="text-h2 text-md-h2 text-sm-h3 font-weight-bold text-primary">600M+</div>
-              <div class="text-subtitle-1 font-weight-medium">{{ t('aboutUs.users') }}</div>
+              <div class="montserrat-24-bold">{{ t('aboutUs.users') }}</div>
             </div>
             
             <!-- Games Stat -->
             <div>
               <div class="text-h2 text-md-h2 text-sm-h3 font-weight-bold text-primary">135+</div>
-              <div class="text-subtitle-1 font-weight-medium">{{ t('aboutUs.games') }}</div>
+              <div class="montserrat-24-bold">{{ t('aboutUs.games') }}</div>
             </div>
           </div>
         </v-col>
@@ -33,8 +33,8 @@
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-clock-outline</v-icon>
             </v-btn>
             <div>
-              <div class="text-h6 font-weight-bold">{{ t('aboutUs.hour.title') }}</div>
-              <div class="text-body-2 montserrat-14-regular">{{ t('aboutUs.hour.description') }}</div>
+              <div class="montserrat-24-bold">{{ t('aboutUs.hour.title') }}</div>
+              <div class="montserrat-14-regular">{{ t('aboutUs.hour.description') }}</div>
             </div>
           </div>
           
@@ -44,8 +44,8 @@
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-palette</v-icon>
             </v-btn>
             <div>
-              <div class="text-h6 font-weight-bold">{{ t('aboutUs.design.title') }}</div>
-              <div class="text-body-2 montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
+              <div class="montserrat-24-bold">{{ t('aboutUs.design.title') }}</div>
+              <div class="montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
             </div>
           </div>
           
@@ -55,8 +55,8 @@
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-account-group</v-icon>
             </v-btn>
             <div>
-              <div class="text-h6 font-weight-bold">{{ t('aboutUs.team.title') }}</div>
-              <div class="text-body-2 montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
+              <div class="montserrat-24-bold">{{ t('aboutUs.team.title') }}</div>
+              <div class="montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
             </div>
           </div>
         </v-col>

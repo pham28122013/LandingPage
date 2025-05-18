@@ -1,6 +1,6 @@
 <template>
   <div class="partners-section">
-    <h1 class="text-center partners-title">{{ t('ourPartners.title') }}</h1>
+    <h1 class="text-center playfair-60-bold-tight">{{ t('ourPartners.title') }}</h1>
     
     <v-carousel
       :show-arrows="true"

@@ -3,10 +3,12 @@
     <v-container fluid>
       <v-row class="text-center mb-4">
         <v-col cols="12">
-          <h1 class="text-h3 font-weight-bold">{{ t('ourGames.title') }}</h1>
-          <p class="text-body-1 text-medium-emphasis px-12">
-            {{ t('ourGames.description') }}
-          </p>
+          <h1 class="playfair-60-bold-tight">{{ t('ourGames.title') }}</h1>
+          <div :style="{padding:'0 100px'}">
+            <p class="montserrat-14-regular">
+              {{ t('ourGames.description') }}
+            </p>
+          </div>
         </v-col>
       </v-row>
 
@@ -37,8 +39,8 @@
             @click="selectGame(game)"
           >
             <div class="pa-5 text-white">
-              <h2 class="text-h5 font-weight-bold mb-2">{{ game.title }}</h2>
-              <p class="text-caption">{{ game.description }}</p>
+              <h2 class="montserrat-48-bold">{{ game.title }}</h2>
+              <p class="montserrat-14-regular-white">{{ game.description }}</p>
             </div>
           </v-card>
         </v-col>

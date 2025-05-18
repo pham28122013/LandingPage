@@ -26,28 +26,28 @@
         
         <!-- Address -->
         <v-col cols="12" md="5">
-          <h3 class="text-h6 text-white mb-4">{{ t('footer.address.title') }}</h3>
+          <h3 class="montserrat-24-bold-white mb-20">{{ t('footer.address.title') }}</h3>
           <div class="d-flex mb-4">
             <v-icon color="white" class="mr-2">mdi-map-marker</v-icon>
             <div class="text-white">
-              <div>{{ t('footer.address.contentEn') }}</div>
-              <div>{{ t('footer.address.contentVn') }}</div>
+              <div class="montserrat-14-regular-white">{{ t('footer.address.contentEn') }}</div>
+              <div class="montserrat-14-regular-white">{{ t('footer.address.contentVn') }}</div>
             </div>
           </div>
           <div class="d-flex align-center">
             <v-icon color="white" class="mr-2">mdi-phone</v-icon>
             <div class="text-white">
-              <span>{{ t('footer.address.phoneEn') }}</span>
-              <span>{{ t('footer.address.or') }}</span>
-              <span>{{ t('footer.address.phoneVn') }}</span>
+              <span class="montserrat-14-regular-white">{{ t('footer.address.phoneEn') }}</span>
+              <span class="montserrat-14-regular-white">{{ t('footer.address.or') }}</span>
+              <span class="montserrat-14-regular-white">{{ t('footer.address.phoneVn') }}</span>
             </div>
           </div>
         </v-col>
 
         <!-- Subscribe -->
         <v-col cols="12" md="4">
-          <h3 class="text-h6 text-white mb-4">{{ t('footer.subscribe.title') }}</h3>
-          <p class="text-white mb-4">{{ t('footer.subscribe.description') }}</p>
+          <h3 class="montserrat-24-bold-white mb-20">{{ t('footer.subscribe.title') }}</h3>
+          <p class="montserrat-14-regular-white mb-20">{{ t('footer.subscribe.description') }}</p>
           <div class="custom-email-input">
             <input 
               type="email" 
@@ -96,7 +96,7 @@ const subscribeToNewsletter = () => {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer-with-bg {
   background-image: url('@/assets/images/footer/bg-footer.png');
   background-size: cover;
@@ -104,52 +104,57 @@ const subscribeToNewsletter = () => {
   position: relative;
   color: white;
   padding: 48px 0 24px 0;
+
+  .custom-email-input {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .email-field {
+    background-color: transparent;
+    border: none;
+    padding: 12px 16px;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .email-field::placeholder {
+    color: white;
+    opacity: 0.7;
+  }
+
+  .submit-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .submit-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
+
 .copy-right {
   background-color: rgba(0, 0, 0, 1);
   padding-bottom: 24px;
-}
-
-.custom-email-input {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 2px;
-  position: relative;
-  overflow: hidden;
-}
-
-.email-field {
-  background-color: transparent;
-  border: none;
-  padding: 12px 16px;
-  color: white;
-  flex-grow: 1;
-  font-size: 16px;
-  outline: none;
-}
-
-.email-field::placeholder {
-  color: white;
-  opacity: 0.7;
-}
-
-.submit-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 </style>
