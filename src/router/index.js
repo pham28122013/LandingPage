@@ -3,7 +3,7 @@ import LandingPage from '@/views/LandingPage.vue'; // hoặc nơi bạn lưu tra
 
 const routes = [
   {
-    path: '/landing',
+    path: '/LandingPage/index',
     name: 'Landing',
     component: LandingPage,
   },
