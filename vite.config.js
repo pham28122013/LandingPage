@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/LandingPage/index', // 👈 Thêm dòng này, trùng với tên repo GitHub
+  base: '/LandingPage/', // ✅ CHỈ cần để tên repo
   plugins: [
     vue(),
     vueDevTools(),
