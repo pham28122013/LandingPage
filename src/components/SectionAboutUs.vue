@@ -34,7 +34,7 @@
             </v-btn>
             <div>
               <div class="text-h6 font-weight-bold">{{ t('aboutUs.hour.title') }}</div>
-              <div class="text-body-2">{{ t('aboutUs.hour.description') }}</div>
+              <div class="text-body-2 montserrat-14-regular">{{ t('aboutUs.hour.description') }}</div>
             </div>
           </div>
           
@@ -56,7 +56,7 @@
             </v-btn>
             <div>
               <div class="text-h6 font-weight-bold">{{ t('aboutUs.team.title') }}</div>
-              <div class="text-body-2">{{ t('aboutUs.design.description') }}</div>
+              <div class="text-body-2 montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
             </div>
           </div>
         </v-col>

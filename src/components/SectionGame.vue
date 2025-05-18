@@ -50,6 +50,18 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n'
+import espace from '@/assets/game/espace.png'
+import pirates from '@/assets/game/pirates.png'
+import magic from '@/assets/game/magic.png'
+import kingland from '@/assets/game/kingland.png'
+import witchParty from '@/assets/game/witchParty.png'
+import aborigines from '@/assets/game/aborigines.png'
+import lastGame from '@/assets/game/lastGame.png'
+import rocky from '@/assets/game/rocky.png'
+import cinderella from '@/assets/game/cinderella.png'
+import dragon from '@/assets/game/dragon.png'
+import blueFire from '@/assets/game/blueFire.png'
+import egypt from '@/assets/game/egypt.png'
 
 const { t, locale } = useI18n()
 
@@ -59,73 +71,73 @@ const games = ref([
     id: 1,
     title: 'E-Space',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/espace.png'
+    image: espace
   },
   {
     id: 2,
     title: 'Kingland',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/pirates.png'
+    image: pirates
   },
   {
     id: 3,
     title: 'The Last Game',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/magic.png'
+    image: magic
   },
   {
     id: 4,
     title: 'G-Dragon',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/kingland.png'
+    image: kingland
   },
   {
     id: 5,
     title: 'Pirates',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/witchParty.png'
+    image: witchParty
   },
   {
     id: 6,
     title: 'Witch Party',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/aborigines.png'
+    image: aborigines
   },
   {
     id: 7,
     title: 'Rocky',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/lastGame.png'
+    image: lastGame
   },
   {
     id: 8,
     title: 'Blue Fire',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/rocky.png'
+    image: rocky
   },
   {
     id: 9,
     title: 'Trâu Vàng',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/cinderella.png'
+    image: cinderella
   },
   {
     id: 10,
     title: 'Aborigines',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/dragon.png'
+    image: dragon
   },
   {
     id: 11,
     title: 'Cinderella',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/blueFire.png'
+    image: blueFire
   },
   {
     id: 12,
     title: 'Egypt Game',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: 'src/assets/game/egypt.png'
+    image: egypt
   }
 ]);
 
