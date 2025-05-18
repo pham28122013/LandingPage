@@ -171,10 +171,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
-import logo from '@/assets/logo.png'
-import enFlag from '@/assets/flags/en.png'
-import vnFlag from '@/assets/flags/vn.png'
-import wizard from '@/assets/header/wizard.png'
+import logo from '@/assets/images/logo.png'
+import enFlag from '@/assets/images/flags/en.png'
+import vnFlag from '@/assets/images/flags/vn.png'
+import wizard from '@/assets/images/header/wizard.png'
 import { useI18n } from 'vue-i18n'
 
 const menuItems = ['header.menu.about', 'header.menu.games', 'header.menu.partners', 'header.menu.contact']
@@ -232,7 +232,7 @@ watch(mobileMenu, (val) => {
   overflow: hidden;
 }
 .background-image {
-  background-image: url('@/assets/header/bg.png');
+  background-image: url('@/assets/images/header/bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

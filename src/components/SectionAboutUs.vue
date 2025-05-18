@@ -93,8 +93,8 @@
 </template>
 
 <script setup>
-import map from '@/assets/aboutUs/map.png';
-import illustrator from '@/assets/aboutUs/illustrator.png';
+import map from '@/assets/images/aboutUs/map.png';
+import illustrator from '@/assets/images/aboutUs/illustrator.png';
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()

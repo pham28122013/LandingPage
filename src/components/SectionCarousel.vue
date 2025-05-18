@@ -39,13 +39,13 @@
 import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 
-import rectangle52 from '@/assets/partner/rectangle-52.png';
-import rectangle53 from '@/assets/partner/rectangle-53.png';
-import rectangle54 from '@/assets/partner/rectangle-54.png';
-import rectangle55 from '@/assets/partner/rectangle-55.png';
-import rectangle56 from '@/assets/partner/rectangle-56.png';
-import rectangle57 from '@/assets/partner/rectangle-57.png';
-import rectangle58 from '@/assets/partner/rectangle-58.png';
+import rectangle52 from '@/assets/images/partner/rectangle-52.png';
+import rectangle53 from '@/assets/images/partner/rectangle-53.png';
+import rectangle54 from '@/assets/images/partner/rectangle-54.png';
+import rectangle55 from '@/assets/images/partner/rectangle-55.png';
+import rectangle56 from '@/assets/images/partner/rectangle-56.png';
+import rectangle57 from '@/assets/images/partner/rectangle-57.png';
+import rectangle58 from '@/assets/images/partner/rectangle-58.png';
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()

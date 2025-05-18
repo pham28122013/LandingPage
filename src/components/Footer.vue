@@ -78,7 +78,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import logo from '@/assets/logo.png'
+import logo from '@/assets/images/logo.png'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
@@ -98,7 +98,7 @@ const subscribeToNewsletter = () => {
 
 <style scoped>
 .footer-with-bg {
-  background-image: url('@/assets/footer/bg-footer.png');
+  background-image: url('@/assets/images/footer/bg-footer.png');
   background-size: cover;
   background-position: center;
   position: relative;

@@ -50,18 +50,18 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n'
-import espace from '@/assets/game/espace.png'
-import pirates from '@/assets/game/pirates.png'
-import magic from '@/assets/game/magic.png'
-import kingland from '@/assets/game/kingland.png'
-import witchParty from '@/assets/game/witchParty.png'
-import aborigines from '@/assets/game/aborigines.png'
-import lastGame from '@/assets/game/lastGame.png'
-import rocky from '@/assets/game/rocky.png'
-import cinderella from '@/assets/game/cinderella.png'
-import dragon from '@/assets/game/dragon.png'
-import blueFire from '@/assets/game/blueFire.png'
-import egypt from '@/assets/game/egypt.png'
+import espace from '@/assets/images/game/espace.png'
+import pirates from '@/assets/images/game/pirates.png'
+import magic from '@/assets/images/game/magic.png'
+import kingland from '@/assets/images/game/kingland.png'
+import witchParty from '@/assets/images/game/witchParty.png'
+import aborigines from '@/assets/images/game/aborigines.png'
+import lastGame from '@/assets/images/game/lastGame.png'
+import rocky from '@/assets/images/game/rocky.png'
+import cinderella from '@/assets/images/game/cinderella.png'
+import dragon from '@/assets/images/game/dragon.png'
+import blueFire from '@/assets/images/game/blueFire.png'
+import egypt from '@/assets/images/game/egypt.png'
 
 const { t, locale } = useI18n()
 
@@ -142,8 +142,7 @@ const games = ref([
 ]);
 
 const selectGame = (game) => {
-  console.log(`Selected game: ${game.title}`);
-  // Add game selection logic here
+  
 };
 </script>
 
