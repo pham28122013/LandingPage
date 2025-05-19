@@ -27,10 +27,10 @@ This template should help get you started developing with Vue 3 in Vite.
 ### 📋 Mobile Menu
 
 **Vietnamese**
-![Menu Mobile VN](./src/assets/images/screenshot/menu-mobile-vn.png)
+![Menu Mobile VN](./src/assets/images/screenshot/mobile-menu-vn.png)
 
 **English**
-![Menu Mobile EN](./src/assets/images/screenshot/menu-mobile-en.png)
+![Menu Mobile EN](./src/assets/images/screenshot/mobile-menu-en.png)
 
 ## Recommended IDE Setup
 
