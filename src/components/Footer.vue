@@ -25,29 +25,43 @@
         </v-col>
         
         <!-- Address -->
-        <v-col cols="12" md="5">
+        <v-col cols="12" md="5" class="px-20">
           <h3 class="montserrat-24-bold-white mb-20">{{ t('footer.address.title') }}</h3>
           <div class="d-flex mb-4">
             <v-icon color="white" class="mr-2">mdi-map-marker</v-icon>
             <div class="text-white">
-              <div class="montserrat-14-regular-white">{{ t('footer.address.contentEn') }}</div>
-              <div class="montserrat-14-regular-white">{{ t('footer.address.contentVn') }}</div>
+              <div class="montserrat-14-regular-white">
+                {{ t('footer.address.contentEn') }}
+              </div>
+              <div class="montserrat-14-regular-white">
+                {{ t('footer.address.contentVn') }}
+              </div>
             </div>
           </div>
           <div class="d-flex align-center">
             <v-icon color="white" class="mr-2">mdi-phone</v-icon>
             <div class="text-white">
-              <span class="montserrat-14-regular-white">{{ t('footer.address.phoneEn') }}</span>
-              <span class="montserrat-14-regular-white">{{ t('footer.address.or') }}</span>
-              <span class="montserrat-14-regular-white">{{ t('footer.address.phoneVn') }}</span>
+              <span class="montserrat-14-regular-white">
+                {{ t('footer.address.phoneEn') }}
+              </span>
+              <span class="montserrat-14-regular-white">
+                {{ t('footer.address.or') }}
+              </span>
+              <span class="montserrat-14-regular-white">
+                {{ t('footer.address.phoneVn') }}
+              </span>
             </div>
           </div>
         </v-col>
 
         <!-- Subscribe -->
-        <v-col cols="12" md="4">
-          <h3 class="montserrat-24-bold-white mb-20">{{ t('footer.subscribe.title') }}</h3>
-          <p class="montserrat-14-regular-white mb-20">{{ t('footer.subscribe.description') }}</p>
+        <v-col cols="12" md="4" class="px-20">
+          <h3 class="montserrat-24-bold-white mb-20">
+            {{ t('footer.subscribe.title') }}
+          </h3>
+          <p class="montserrat-14-regular-white mb-20">
+            {{ t('footer.subscribe.description') }}
+          </p>
           <div class="custom-email-input">
             <input 
               type="email" 
@@ -116,10 +130,6 @@ const subscribeToNewsletter = () => {
     overflow: hidden;
   }
 
-  .mb-20 {
-    margin-bottom: 20px !important;
-  }
-
   .email-field {
     background-color: transparent;
     border: none;
@@ -128,11 +138,11 @@ const subscribeToNewsletter = () => {
     flex-grow: 1;
     font-size: 16px;
     outline: none;
-  }
 
-  .email-field::placeholder {
-    color: white;
-    opacity: 0.7;
+    &::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
   }
 
   .submit-button {
@@ -146,15 +156,21 @@ const subscribeToNewsletter = () => {
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.3s;
-  }
-
-  .submit-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 
 .copy-right {
   background-color: rgba(0, 0, 0, 1);
   padding-bottom: 24px;
+}
+
+@media (max-width: 960px) {
+  .px-20 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
 }
 </style>

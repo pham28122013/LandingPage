@@ -1,6 +1,8 @@
 <template>
   <div class="partners-section">
-    <h1 class="text-center playfair-60-bold-tight">{{ t('ourPartners.title') }}</h1>
+    <h1 class="text-center playfair-60-bold-tight">
+      {{ t('ourPartners.title') }}
+    </h1>
     
     <v-carousel
       :show-arrows="true"
@@ -38,7 +40,6 @@
 <script setup>
 import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
-
 import rectangle52 from '@/assets/images/partner/rectangle-52.png';
 import rectangle53 from '@/assets/images/partner/rectangle-53.png';
 import rectangle54 from '@/assets/images/partner/rectangle-54.png';
@@ -78,42 +79,75 @@ const partnerItems = computed(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .partners-section {
   padding: 30px 0;
   border-radius: 4px;
   background-color: #d1c6c621;
   margin-top: 120px;
-}
 
-.partners-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
+  .partners-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
 
-.partners-carousel {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .partners-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.partner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  height: 100%;
-  padding: 0 40px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
+  .partner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-.partner-item {
-  flex: 0 0 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
+  .partner-item {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .partner-logo {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  :deep(.v-carousel__controls) {
+    background: transparent;
+  }
+
+  :deep(.v-carousel__prev),
+  :deep(.v-carousel__next) {
+    background: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+  }
+
+  :deep(.v-carousel__prev:hover),
+  :deep(.v-carousel__next:hover) {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  :deep(.v-carousel__next .v-icon),
+  :deep(.v-carousel__prev .v-icon) {
+    color: black;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -129,40 +163,5 @@ const partnerItems = computed(() => {
   .partners-section {
     margin-top: 48px;
   }
-}
-
-.partner-logo {
-  transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-  transform: scale(1.05);
-}
-
-/* Custom styles for carousel arrows */
-:deep(.v-carousel__controls) {
-  background: transparent;
-}
-
-:deep(.v-carousel__prev),
-:deep(.v-carousel__next) {
-  background: white;
-  border-radius: 50%;
-  margin: 0 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 50px;
-  height: 50px;
-}
-
-:deep(.v-carousel__prev:hover),
-:deep(.v-carousel__next:hover) {
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-:deep(.v-carousel__next .v-icon),
-:deep(.v-carousel__prev .v-icon) {
-  color: black;
-  font-size: 24px;
 }
 </style>

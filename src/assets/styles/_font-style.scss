@@ -1,3 +1,4 @@
+// Montserrat
 .montserrat-14-regular {
   font-family: 'Montserrat';
   font-style: normal;
@@ -7,35 +8,14 @@
   color: #757575
 }
 
-.playfair-80-bold {
-  font-family: 'Playfair Display';
-  font-weight: 900;
-  font-size: 80px;
-  line-height: 120px;
-  letter-spacing: 0.6px;
-  text-align: center;
-  color: #fff;
-}
-
-.playfair-60-bold {
-  font-family: 'Playfair Display';
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 64px;
-  letter-spacing: 4.8px;
-  text-align: center;
-  color: #000;
-}
-
-.montserrat-15-bold {
+.montserrat-14-regular-white {
   font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 15.64px;
-  line-height: 100%;
-  letter-spacing: -0.65px;
-  text-align: center;
-  vertical-align: middle;
-  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  vertical-align: bottom;
+  color: #fff;
 }
 
 .montserrat-18-regular {
@@ -57,12 +37,23 @@
   color: #fff;
 }
 
-.playfair-60-bold-tight {
-  font-family: 'Playfair Display';
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
-  letter-spacing: 3.6px;
+.montserrat-24-bold-white {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #fff;
+}
+
+.montserrat-15-bold {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 15.64px;
+  line-height: 100%;
+  letter-spacing: -0.65px;
+  text-align: center;
+  vertical-align: middle;
   color: #000;
 }
 
@@ -85,21 +76,32 @@
   color: #fff;
 }
 
-.montserrat-14-regular-white {
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0px;
-  vertical-align: bottom;
-  color: #fff;
+// Playfair Display
+.playfair-60-bold {
+  font-family: 'Playfair Display';
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: 4.8px;
+  text-align: center;
+  color: #000;
 }
 
-.montserrat-24-bold-white {
-  font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  letter-spacing: 0px;
+.playfair-60-bold-tight {
+  font-family: 'Playfair Display';
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 3.6px;
+  color: #000;
+}
+
+.playfair-80-bold {
+  font-family: 'Playfair Display';
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 120px;
+  letter-spacing: 0.6px;
+  text-align: center;
   color: #fff;
 }

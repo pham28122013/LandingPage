@@ -1,13 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import LandingPage from '@/views/LandingPage.vue'; // hoặc nơi bạn lưu trang landing
+import LandingPage from '@/views/LandingPage.vue';
 
 const routes = [
   {
-    path: '/LandingPage/',
-    name: 'Landing',
+    path: '/LandingPage',
+    name: 'LandingPage',
     component: LandingPage,
   },
-  // thêm các route khác nếu có
 ];
 
 const router = createRouter({

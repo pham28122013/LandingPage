@@ -1,10 +1,12 @@
 <template>
   <v-app>
-    <v-container fluid>
+    <v-container fluid class="our-game">
       <v-row class="text-center mb-4">
         <v-col cols="12">
-          <h1 class="playfair-60-bold-tight">{{ t('ourGames.title') }}</h1>
-          <div :style="{padding:'0 100px'}">
+          <h1 class="playfair-60-bold-tight">
+            {{ t('ourGames.title') }}
+          </h1>
+          <div class="our-game-description">
             <p class="montserrat-14-regular">
               {{ t('ourGames.description') }}
             </p>
@@ -13,7 +15,6 @@
       </v-row>
 
       <v-row>
-        <!-- Game Cards -->
         <v-col
           v-for="(game, index) in games"
           :key="game.id"
@@ -39,8 +40,12 @@
             @click="selectGame(game)"
           >
             <div class="pa-5 text-white">
-              <h2 class="montserrat-48-bold">{{ game.title }}</h2>
-              <p class="montserrat-14-regular-white">{{ game.description }}</p>
+              <h2 class="montserrat-48-bold">
+                {{ game.title }}
+              </h2>
+              <p class="montserrat-14-regular-white">
+                {{ t(game.description) }}
+              </p>
             </div>
           </v-card>
         </v-col>
@@ -67,78 +72,77 @@ import egypt from '@/assets/images/game/egypt.png'
 
 const { t, locale } = useI18n()
 
-// Game data
 const games = ref([
   {
     id: 1,
     title: 'E-Space',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: espace
   },
   {
     id: 2,
     title: 'Kingland',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: pirates
   },
   {
     id: 3,
     title: 'The Last Game',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: magic
   },
   {
     id: 4,
     title: 'G-Dragon',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: kingland
   },
   {
     id: 5,
     title: 'Pirates',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: witchParty
   },
   {
     id: 6,
     title: 'Witch Party',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: aborigines
   },
   {
     id: 7,
     title: 'Rocky',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: lastGame
   },
   {
     id: 8,
     title: 'Blue Fire',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: rocky
   },
   {
     id: 9,
     title: 'Trâu Vàng',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: cinderella
   },
   {
     id: 10,
     title: 'Aborigines',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: dragon
   },
   {
     id: 11,
     title: 'Cinderella',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: blueFire
   },
   {
     id: 12,
     title: 'Egypt Game',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'ourGames.card.description',
     image: egypt
   }
 ]);
@@ -148,13 +152,34 @@ const selectGame = (game) => {
 };
 </script>
 
-<style scoped>
-.game-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+<style lang="scss" scoped>
+.our-game {
+  .our-game-desciption {
+    padding: 0 100px;
+  }
+  .game-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
-.game-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+@media (max-width: 960px) {
+  .our-game {
+    .our-game-desciption {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .our-game {
+    .our-game-desciption {
+      padding: 0 30px;
+    }
+  }
 }
 </style>

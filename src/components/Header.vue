@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <div class="landing-wrapper">
-      <!-- Background Image -->
       <div class="background-image">
         <!-- Navbar -->
         <v-app-bar flat elevation="0" color="transparent" class="px-8 py-4">
@@ -88,13 +87,11 @@
           <div class="d-flex flex-column align-center mt-10" v-for="(item, index) in menuItems"
               :key="item">
             <v-btn
-              
               variant="text"
               class="text-black text-h6 mb-4"
               @click="mobileMenu = false"
             >
-              {{ item }}
-              
+              {{ t(item) }}
             </v-btn>
             <v-divider v-if="index < menuItems.length - 1" class="border-bottom-menu" />
           </div>
@@ -177,7 +174,12 @@ import vnFlag from '@/assets/images/flags/vn.png'
 import wizard from '@/assets/images/header/wizard.png'
 import { useI18n } from 'vue-i18n'
 
-const menuItems = ['header.menu.about', 'header.menu.games', 'header.menu.partners', 'header.menu.contact']
+const menuItems = [
+  'header.menu.about',
+  'header.menu.games',
+  'header.menu.partners',
+  'header.menu.contact'
+]
 const { t, locale } = useI18n()
 
 const countdown = ref({ Days: 0, Hours: 0, Minutes: 0, Second: 0 })
@@ -226,93 +228,103 @@ watch(mobileMenu, (val) => {
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .landing-wrapper {
   min-height: 100vh;
   overflow: hidden;
-}
-.background-image {
-  background-image: url('@/assets/images/header/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-top: 80px;
-  position: relative;
-}
-.wizard-image {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-.main-content {
-  padding-top: 40px;
-  padding-bottom: 100px;
-  position: relative;
-  z-index: 2;
-}
-.email-input {
-  width: 100%;
-  max-width: 400px;
-  background-color: white;
-  border-radius: 8px;
-}
-.countdown-card {
-  padding: 24px 0 !important;
-}
-.v-list-laguage ::v-deep .v-list-item__content {
-  padding: 4px 25px;
-  display: flex;
-}
-.mobile-menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: white;
-  z-index: 9999;
-  overflow: hidden;
-}
-.close-menu-mobile {
-  box-shadow: none;
-}
-.select-language-mobile {
-  border: 1px solid #AFAFAF;
-  border-radius: 4px;
-  width: 80px !important;
-  height: 40px !important;
-  background-color: #e0dada7a;
-}
-.border-bottom-menu {
-  color: #131111;
-  height: 2px;
-  width: 100%;
-}
-.wizard-image-mobile {
-  display: none;
+
+  .background-image {
+    background-image: url('@/assets/images/header/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 80px;
+    position: relative;
+  }
+  .wizard-image {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .main-content {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 2;
+  }
+  .email-input {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .countdown-card {
+    padding: 24px 0 !important;
+  }
+  .v-list-laguage ::v-deep .v-list-item__content {
+    padding: 4px 25px;
+    display: flex;
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  .close-menu-mobile {
+    box-shadow: none;
+  }
+  .select-language-mobile {
+    border: 1px solid #AFAFAF;
+    border-radius: 4px;
+    width: 80px !important;
+    height: 40px !important;
+    background-color: #e0dada7a;
+  }
+  .border-bottom-menu {
+    color: #131111;
+    height: 2px;
+    width: 100%;
+  }
+  .wizard-image-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 960px) {
-  .px-8 {
-    padding: 0 !important;
-  }
-  .email-input {
-    margin: 0 16px;
+  .landing-wrapper {
+    .px-8 {
+      padding: 0 !important;
+    }
+    .email-input {
+      margin: 0 16px;
+    }
+
+    .wizard-image {
+      bottom: -20px;
+    }
   }
 }
+
 @media (max-width: 600px) {
-  .text-header {
-    margin: 0 16px !important;
-  }
-  .wizard-image {
-    display: none;
-  }
-  .wizard-image-mobile {
-    display: block;
-    height: 300px;
-    width: 300px;
-    margin-top: -120px;
-    margin-left: 100px;
+  .landing-wrapper {
+    .text-header {
+      margin: 0 16px !important;
+    }
+    .wizard-image {
+      display: none;
+    }
+    .wizard-image-mobile {
+      display: block;
+      height: 300px;
+      width: 300px;
+      margin-top: -120px;
+      margin-left: 100px;
+    }
   }
 }
 </style>

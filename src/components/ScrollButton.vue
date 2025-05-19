@@ -19,10 +19,8 @@ const handleScroll = () => {
 
 const handleClick = () => {
   if (isTop.value) {
-    // Scroll xuống 500px
     window.scrollTo({ top: 500, behavior: 'smooth' });
   } else {
-    // Scroll lên đầu
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
@@ -36,7 +34,7 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .scroll-button {
   position: fixed;
   bottom: 30px;

@@ -2,22 +2,20 @@
   <div class="about-us-container">
     <v-container class="about-us-content">
       <v-row>
-        <!-- Left Section: About Us Text and Stats -->
-        <v-col cols="12" md="6" class="pr-md-6">
-          <h1 class="playfair-60-bold-tight">{{ t('aboutUs.title') }}</h1>
-          
+        <v-col cols="12" md="6" class="pr-md-6 px-20">
+          <h1 class="playfair-60-bold-tight mb-20">
+            {{ t('aboutUs.title') }}
+          </h1>
           <p class="text-body-1 mb-6 montserrat-14-regular ">
             {{ t('aboutUs.description')}}
           </p>
           
           <div class="d-flex flex-column mb-8">
-            <!-- Users Stat -->
             <div class="mb-8">
               <div class="text-h2 text-md-h2 text-sm-h3 font-weight-bold text-primary">600M+</div>
               <div class="montserrat-24-bold">{{ t('aboutUs.users') }}</div>
             </div>
             
-            <!-- Games Stat -->
             <div>
               <div class="text-h2 text-md-h2 text-sm-h3 font-weight-bold text-primary">135+</div>
               <div class="montserrat-24-bold">{{ t('aboutUs.games') }}</div>
@@ -25,48 +23,54 @@
           </div>
         </v-col>
         
-        <!-- Right Section: Features -->
-        <v-col cols="12" md="6" class="bg-grey-lighten-3 pa-md-8 pa-4 rounded">
-          <!-- 24-Hour Support Feature -->
+        <v-col cols="12" md="6" class="bg-grey-lighten-3 pa-md-8 pa-4 rounded about-social">
           <div class="d-flex align-start mb-8">
             <v-btn icon class="my-icon-btn">
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-clock-outline</v-icon>
             </v-btn>
             <div>
-              <div class="montserrat-24-bold">{{ t('aboutUs.hour.title') }}</div>
-              <div class="montserrat-14-regular">{{ t('aboutUs.hour.description') }}</div>
+              <div class="montserrat-24-bold">
+                {{ t('aboutUs.hour.title') }}
+              </div>
+              <div class="montserrat-14-regular">
+                {{ t('aboutUs.hour.description') }}
+              </div>
             </div>
           </div>
           
-          <!-- Design Feature -->
           <div class="d-flex align-start mb-8">
             <v-btn icon class="my-icon-btn">
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-palette</v-icon>
             </v-btn>
             <div>
-              <div class="montserrat-24-bold">{{ t('aboutUs.design.title') }}</div>
-              <div class="montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
+              <div class="montserrat-24-bold">
+                {{ t('aboutUs.design.title') }}
+              </div>
+              <div class="montserrat-14-regular">
+                {{ t('aboutUs.design.description') }}
+              </div>
             </div>
           </div>
           
-          <!-- Team Feature -->
           <div class="d-flex align-start">
             <v-btn icon class="my-icon-btn">
               <v-icon color="teal" size="x-large" :style="{color: '#000000 !important'}">mdi-account-group</v-icon>
             </v-btn>
             <div>
-              <div class="montserrat-24-bold">{{ t('aboutUs.team.title') }}</div>
-              <div class="montserrat-14-regular">{{ t('aboutUs.design.description') }}</div>
+              <div class="montserrat-24-bold">
+                {{ t('aboutUs.team.title') }}
+              </div>
+              <div class="montserrat-14-regular">
+                {{ t('aboutUs.design.description') }}
+              </div>
             </div>
           </div>
         </v-col>
       </v-row>
-      
-      <!-- Map Section with Character -->
+
       <v-row class="map-container justify-center">
         <v-col cols="12" sm="10" md="8" lg="6" class="d-flex justify-center">
           <div class="witch-map-wrapper">
-            <!-- Character Image in bordered container -->
             <div class="witch-frame">
               <div class="witch-character floating">
                 <v-img
@@ -77,7 +81,6 @@
               </div>
             </div>
             
-            <!-- World Map Image -->
             <div class="world-map">
               <v-img
                 :src="map"
@@ -101,84 +104,90 @@ const { t, locale } = useI18n()
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about-us-container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 120px 0;
-}
 
-.about-us-content {
-  max-width: 1200px;
-  width: 100%;
-  padding: 1rem;
-}
+  .about-us-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+  }
 
-.text-primary {
-  color: #03a9f4 !important;
-}
+  .text-primary {
+    color: #03a9f4 !important;
+  }
 
-.witch-map-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin-top: 20px;
-}
+  .about-social {
+    padding: 50px 30px !important;
+  }
 
-.witch-frame {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  overflow: hidden;
-  margin: 0 auto;
-  z-index: 2;
-  background-color: #fff;
-}
+  .witch-map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
 
-.witch-character {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .witch-frame {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 2;
+    background-color: #fff;
+  }
 
-.world-map {
-  position: relative;
-  margin-top: -30px;
-  width: 100%;
-}
+  .witch-character {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* Size indicator as shown in the image */
-.size-indicator {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #03a9f4;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-}
+  .world-map {
+    position: relative;
+    margin-top: -30px;
+    width: 100%;
+  }
 
-.my-icon-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  min-width: 0;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  background-color: #00ffff0f;
-}
+  .size-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #03a9f4;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
 
-/* Floating animation for the witch character */
-.floating {
-  animation: float 6s ease-in-out infinite;
+  .my-icon-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    min-width: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    background-color: #00ffff0f;
+  }
+
+  .pr-md-6 {
+    padding-top: 0 !important;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -227,6 +236,11 @@ const { t, locale } = useI18n()
   .size-indicator {
     font-size: 12px;
   }
+
+  .px-20 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -245,10 +259,7 @@ const { t, locale } = useI18n()
   .size-indicator {
     padding: 2px 8px;
   }
-}
 
-/* Align icons to top for better readability on mobile */
-@media (max-width: 600px) {
   .pr-md-6 {
     padding-right: 0 !important;
     margin-bottom: 2rem;
