@@ -105,3 +105,10 @@
   text-align: center;
   color: #fff;
 }
+
+@media (max-width: 600px) {
+  .playfair-60-bold-tight {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}

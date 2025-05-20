@@ -312,6 +312,17 @@ watch(mobileMenu, (val) => {
 
 @media (max-width: 600px) {
   .landing-wrapper {
+    .playfair-80-bold {
+      font-size: 40px;
+      line-height: 50px;
+    }
+    .playfair-60-bold {
+      font-size: 36px;
+      line-height: 45px;
+    }
+    .montserrat-15-bold {
+      font-size: 12px;
+    }
     .text-header {
       margin: 0 16px !important;
     }

@@ -151,8 +151,10 @@ const partnerItems = computed(() => {
 }
 
 @media (max-width: 960px) {
-  .partner-item {
-    flex: 0 0 50%;
+  .partners-section {
+    .partner-item {
+      flex: 0 0 60%;
+    }
   }
 }
 
@@ -162,6 +164,9 @@ const partnerItems = computed(() => {
   }
   .partners-section {
     margin-top: 48px;
+    .partner-item {
+      flex: 0 0 80%;
+    }
   }
 }
 </style>

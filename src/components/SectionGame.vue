@@ -22,9 +22,7 @@
           sm="6"
           md="4"
           lg="3"
-          :style="{
-            marginTop: [1, 3].includes(index % 4) ? '40px' : ''
-          }"
+          :class="getColClass(index)"
         >
           <v-card
             :height="300"
@@ -150,12 +148,18 @@ const games = ref([
 const selectGame = (game) => {
   
 };
+const getColClass = (index) => {
+  return [1, 3].includes(index % 4) ? 'margin-top-40' : '';
+};
 </script>
 
 <style lang="scss" scoped>
 .our-game {
   .our-game-desciption {
     padding: 0 100px;
+  }
+  .margin-top-40 {
+    margin-top: 40px;
   }
   .game-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -179,6 +183,9 @@ const selectGame = (game) => {
   .our-game {
     .our-game-desciption {
       padding: 0 30px;
+    }
+    .margin-top-40 {
+      margin-top: 0;
     }
   }
 }
